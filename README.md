@@ -14,11 +14,11 @@ heroku-postico
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g heroku-postico
+$ npm install -g @connectedyard/heroku-postico
 $ heroku-postico COMMAND
 running command...
 $ heroku-postico (-v|--version|version)
-heroku-postico/0.0.1 darwin-x64 node-v12.11.1
+@connectedyard/heroku-postico/0.0.2 darwin-x64 node-v12.11.1
 $ heroku-postico --help [COMMAND]
 USAGE
   $ heroku-postico COMMAND
@@ -46,5 +46,5 @@ DESCRIPTION
   ...
 ```
 
-_See code: [src/commands/postico/open.js](https://github.com/PhinCo/heroku-postico/blob/v0.0.1/src/commands/postico/open.js)_
+_See code: [src/commands/postico/open.js](https://github.com/PhinCo/heroku-postico/blob/v0.0.2/src/commands/postico/open.js)_
 <!-- commandsstop -->
