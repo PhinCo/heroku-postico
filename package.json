@@ -37,7 +37,7 @@
   "license": "MIT",
   "oclif": {
     "commands": "./src/commands",
-    "bin": "heroku postico",
+    "bin": "heroku postico:",
     "devPlugins": [
       "@oclif/plugin-help"
     ]
@@ -48,6 +48,6 @@
     "posttest": "eslint .",
     "prepack": "oclif-dev manifest && oclif-dev readme",
     "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
-    "version": "oclif-dev readme && git add README.md"
+    "xversion": "oclif-dev readme && git add README.md"
   }
 }
