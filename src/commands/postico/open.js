@@ -10,7 +10,6 @@ class OpenCommand extends Command {
     static description = `Fetch a list of Heroku postgres databases for a team and connect in Postico`
 
     static flags = {
-        // app: flags.app({ required: true, description: 'the app you want to open the DB for.' }),
         team: flags.team({ required: true }),
         verbose: flags.boolean({ description: 'Enable extra debug output.' })
     }
@@ -34,11 +33,6 @@ class OpenCommand extends Command {
 
         openurl.open(`${postgresUrl}?nickname=${selectedPostgresAddon.name}`)
         this.exit()
-    }
-
-    async fetchPostgresUrlForAddon( addon ){
-        const { body: config } = await this.heroku.get(`/apps/${addon.app.name}/config-vars`)
-        return config[addon.config_vars[0]]
     }
 
     async selectAPostgresDatabase( postgresAddons, verbose ){

@@ -7,7 +7,10 @@
     "@heroku-cli/command": "^8.3.0",
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
+    "bplist-creator": "0.0.8",
+    "colors": "^1.4.0",
     "inquirer": "^7.3.3",
+    "mkdirp": "^1.0.4",
     "openurl": "^1.1.1"
   },
   "devDependencies": {
