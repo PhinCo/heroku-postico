@@ -1,5 +1,5 @@
 {
-  "name": "heroku-postico",
+  "name": "@connectedyard/heroku-postico",
   "version": "0.0.1",
   "author": "Josh Kennedy @jkennedy1980",
   "bugs": "https://github.com/PhinCo/heroku-postico/issues",
