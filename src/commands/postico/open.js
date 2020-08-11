@@ -1,14 +1,13 @@
 const { Command, flags } = require('@heroku-cli/command')
 const inquirer = require('inquirer')
 const openurl = require('openurl')
+const HerokuApiCalls = require('../../lib/HerokuApiCalls')
 
 class OpenCommand extends Command {
 
     static needsAuth = true
 
-    static description = `Fetch a list of Heroku postgres databases for a team and connect in Postico
-    ...
-    `
+    static description = `Fetch a list of Heroku postgres databases for a team and connect in Postico`
 
     static flags = {
         // app: flags.app({ required: true, description: 'the app you want to open the DB for.' }),
@@ -18,8 +17,9 @@ class OpenCommand extends Command {
 
     async run() {
         const { flags: { verbose, team } } = this.parse(OpenCommand)
+		const apiCalls = new HerokuApiCalls( this );
 
-        const postgresAddons = await this.fetchPostgresDatabasesForTeam( team, verbose )
+        const postgresAddons = await apiCalls.fetchPostgresDatabaseAddonsForTeam( team )
         if( !postgresAddons || postgresAddons.length === 0 ){
             this.error(`No postgres addons found. Please check your team name.`)
         }
@@ -27,7 +27,7 @@ class OpenCommand extends Command {
         const selectedPostgresAddon = await this.selectAPostgresDatabase( postgresAddons, verbose )
         if( !selectedPostgresAddon ) return
 
-        const postgresUrl = await this.fetchPostgresUrlForAddon( selectedPostgresAddon )
+        const postgresUrl = await apiCalls.fetchPostgresUrlForAddon( selectedPostgresAddon )
         if( !postgresUrl ){
             this.error(`Could not resolve the connection string for addon: ${selectedPostgresAddon.name}`)
         }
@@ -39,22 +39,6 @@ class OpenCommand extends Command {
     async fetchPostgresUrlForAddon( addon ){
         const { body: config } = await this.heroku.get(`/apps/${addon.app.name}/config-vars`)
         return config[addon.config_vars[0]]
-    }
-
-    async fetchPostgresDatabasesForTeam( team, verbose = false ){
-        const { body: addons } = await this.heroku.get(`/teams/${team}/addons`)
-
-        const postgresAddonsByBillingApp = addons.reduce( ( collector, addon ) => {
-            if( addon.addon_service.name !== 'heroku-postgresql' ) return collector
-
-            // Heroku returns the same addon JSON object multiple times if the addon
-            // is shared with multiple apps - first one wins
-            if( !collector[addon.name] ) collector[addon.name] = addon
-
-            return collector
-        }, {} )
-
-        return Object.values( postgresAddonsByBillingApp )
     }
 
     async selectAPostgresDatabase( postgresAddons, verbose ){
