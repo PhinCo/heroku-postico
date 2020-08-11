@@ -15,18 +15,36 @@ heroku-postico
 <!-- usage -->
 ```sh-session
 $ npm install -g heroku-postico
-$ heroku plugins:install heroku-postico
-$ heroku postico --help
-$ heroku postico:open --team=[your team name]
+$ heroku-postico COMMAND
+running command...
+$ heroku-postico (-v|--version|version)
+heroku-postico/0.0.1 darwin-x64 node-v12.11.1
+$ heroku-postico --help [COMMAND]
+USAGE
+  $ heroku-postico COMMAND
+...
 ```
 <!-- usagestop -->
 
 # Commands
 <!-- commands -->
-* [`postico:open`](#postico-open)
+* [`heroku-postico postico:open`](#heroku-postico-posticoopen)
 
-## `postico-open`
+## `heroku-postico postico:open`
 
-Accepts `--team` and fetches all postgres database addons assigned to apps in the team. You can choose a database
-to open and connect in Postico.
+Fetch a list of Heroku postgres databases for a team and connect in Postico
+
+```
+USAGE
+  $ heroku-postico postico:open
+
+OPTIONS
+  -t, --team=team  (required) team to use
+  --verbose        Enable extra debug output.
+
+DESCRIPTION
+  ...
+```
+
+_See code: [src/commands/postico/open.js](https://github.com/PhinCo/heroku-postico/blob/v0.0.1/src/commands/postico/open.js)_
 <!-- commandsstop -->
