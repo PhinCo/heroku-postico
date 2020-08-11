@@ -15,13 +15,8 @@ heroku-postico
 <!-- usage -->
 ```sh-session
 $ npm install -g @connectedyard/heroku-postico
-$ heroku postico COMMAND
-running command...
-$ heroku postico (-v|--version|version)
-@connectedyard/heroku-postico/0.0.3 darwin-x64 node-v12.11.1
-$ heroku postico --help [COMMAND]
-USAGE
-  $ heroku postico COMMAND
+$ heroku plugins:install @connectedyard/heroku-postico
+$ heroku postico
 ...
 ```
 <!-- usagestop -->
@@ -36,7 +31,7 @@ Fetch a list of Heroku postgres databases for a team and connect in Postico
 
 ```
 USAGE
-  $ heroku postico postico:open
+  $ heroku postico:open
 
 OPTIONS
   -t, --team=team  (required) team to use
