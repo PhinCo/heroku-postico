@@ -1,6 +1,6 @@
 {
   "name": "@connectedyard/heroku-postico",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "Josh Kennedy @jkennedy1980",
   "bugs": "https://github.com/PhinCo/heroku-postico/issues",
   "dependencies": {
