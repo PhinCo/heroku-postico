@@ -7,7 +7,7 @@ heroku-postico
 [![License](https://img.shields.io/npm/l/heroku-postico.svg)](https://github.com/PhinCo/heroku-postico/blob/master/package.json)
 
 Tools to make it easier to connect to Heroku postgres databases from [Postico](https://eggerapps.at/postico/). You must have 
-Postico installed for this tool to work.
+Postico installed for this tool to work. If you've never used Postico - it's one of the best Postgres apps for OSX on the market.
 
 * [Installation](#installation)
 * [Commands](#commands)
@@ -47,7 +47,7 @@ USAGE
 
 ![](readme-assets/postico-export-small.gif)
 
-Once the favorites are exported, drag & drop the folder onto the postico favorites window. **Be sure to delete the exported 
+Once the favorites are exported, drag & drop the folder onto the postico favorites window. ** :warning: :warning: :warning: Be sure to delete the exported 
 favorites folder permanently after importing to prevent leaking your passwords.**
 
 
