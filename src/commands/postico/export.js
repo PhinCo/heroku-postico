@@ -26,7 +26,7 @@ class ExportCommand extends Command {
 
     static needsAuth = true
 
-    static description = `Export postico favorites for all postgres addons for a team`
+    static description = `Export a folder containing Postico favorite files for all Heroku postgres databases associated with a team.`
 
     static flags = {
         team: flags.team({ required: true }),

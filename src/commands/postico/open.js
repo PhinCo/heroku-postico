@@ -7,7 +7,7 @@ class OpenCommand extends Command {
 
     static needsAuth = true
 
-    static description = `Fetch a list of Heroku postgres databases for a team and connect in Postico`
+    static description = `Fetch Heroku postgres databases for a team to choose from a list and connect in Postico.`
 
     static flags = {
         team: flags.team({ required: true }),
