@@ -36,6 +36,9 @@
   ],
   "homepage": "https://github.com/PhinCo/heroku-postico",
   "keywords": [
+    "heroku",
+    "postico",
+    "postgres",
     "oclif-plugin"
   ],
   "license": "MIT",
