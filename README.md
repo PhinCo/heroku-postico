@@ -47,8 +47,10 @@ USAGE
 
 ![](readme-assets/postico-export-small.gif)
 
-Once the favorites are exported, drag & drop the folder onto the postico favorites window. ** :warning: :warning: :warning: Be sure to delete the exported 
-favorites folder permanently after importing to prevent leaking your passwords.**
+Once the favorites are exported, drag & drop the folder onto the postico favorites window.
+
+:warning: :warning: :warning: Be sure to delete the exported 
+favorites folder permanently after importing to prevent leaking your passwords.
 
 
 # Developing
