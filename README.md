@@ -2,9 +2,6 @@ heroku-postico
 ==============
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/heroku-postico.svg)](https://npmjs.org/package/heroku-postico)
-[![Downloads/week](https://img.shields.io/npm/dw/heroku-postico.svg)](https://npmjs.org/package/heroku-postico)
-[![License](https://img.shields.io/npm/l/heroku-postico.svg)](https://github.com/PhinCo/heroku-postico/blob/master/package.json)
 
 Tools to make it easier to connect to Heroku postgres databases from [Postico](https://eggerapps.at/postico/). You must have 
 Postico installed for this tool to work. If you've never used Postico - it's one of the best Postgres apps for OSX on the market.
