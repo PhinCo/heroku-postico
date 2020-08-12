@@ -8,6 +8,7 @@
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
     "bplist-creator": "0.0.8",
+    "cli-ux": "^5.4.10",
     "colors": "^1.4.0",
     "inquirer": "^7.3.3",
     "mkdirp": "^1.0.4",
